@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Map - Christmas Under The Stars</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/map.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="stars-container">
+        <div class="stars-layer stars-small"></div>
+        <div class="stars-layer stars-medium"></div>
+        <div class="stars-layer stars-large"></div>
+    </div>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">Christmas Under The Stars</a>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="schedule.html">Schedule</a>
+                <a href="map.html" class="active">Map</a>
+                <a href="photos.html">Photos</a>
+                <a href="index.html#qa-section">Q&A</a>
+            </div>
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header parallax-section">
+            <div class="hanging-ornaments">
+                <div class="ornament star" style="left: 5%; animation-delay: 0s;"></div>
+                <div class="ornament star" style="left: 25%; animation-delay: 1s;"></div>
+                <div class="ornament star" style="left: 45%; animation-delay: 2s;"></div>
+                <div class="ornament star" style="left: 65%; animation-delay: 3s;"></div>
+                <div class="ornament star" style="left: 85%; animation-delay: 4s;"></div>
+            </div>
+            <div class="header-content">
+                <h1 class="glow-text">Event Map</h1>
+                <p>Find your way around Christmas Under The Stars</p>
+            </div>
+        </section>
+
+        <section class="map-section parallax-section">
+            <div class="section-content">
+                <div class="map-intro">
+                    <h2>Navigate Our Winter Wonderland</h2>
+                    <p>Use this interactive map to find all the activities, performances, and food stalls at our Christmas event.</p>
+                </div>
+                
+                <div class="map-container">
+                    <div class="map-wrapper">
+                        <div class="map-image">
+                            <!-- Interactive map will be inserted here with JavaScript -->
+                            <svg id="event-map" viewBox="0 0 1000 700" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Background -->
+                                <rect x="0" y="0" width="1000" height="700" fill="#002642" />
+                                
+                                <!-- Church Building -->
+                                <rect x="50" y="50" width="300" height="200" fill="#1a3a54" stroke="#e9c46a" stroke-width="2" class="map-location" data-name="Church Building" data-desc="The main church building" />
+                                <text x="200" y="150" text-anchor="middle" fill="#ffffff" font-size="18">Church Building</text>
+                                
+                                <!-- Main Stage -->
+                                <rect x="400" y="100" width="200" height="100" fill="#1a3a54" stroke="#e9c46a" stroke-width="2" class="map-location" data-name="Main Stage" data-desc="Location for performances, carols, and announcements" />
+                                <text x="500" y="150" text-anchor="middle" fill="#ffffff" font-size="18">Main Stage</text>
+                                
+                                <!-- Food Court -->
+                                <rect x="650" y="50" width="300" height="150" fill="#1a3a54" stroke="#e9c46a" stroke-width="2" class="map-location" data-name="Food Court" data-desc="Various food stalls including Fish Tacos, Chips on a Stick, Fool & Falafel, Fairy Floss, and Loukoumades" />
+                                <text x="800" y="125" text-anchor="middle" fill="#ffffff" font-size="18">Food Court</text>
+                                
+                                <!-- Activity Area 1 -->
+                                <rect x="100" y="300" width="200" height="150" fill="#1a3a54" stroke="#e9c46a" stroke-width="2" class="map-location" data-name="Santa Photo Booth" data-desc="Take photos with Santa" />
+                                <text x="200" y="375" text-anchor="middle" fill="#ffffff" font-size="18">Santa Photo Booth</text>
+                                
+                                <!-- Activity Area 2 -->
+                                <rect x="350" y="300" width="200" height="150" fill="#1a3a54" stroke="#e9c46a" stroke-width="2" class="map-location" data-name="Arts & Crafts" data-desc="Christmas-themed arts and crafts activities" />
+                                <text x="450" y="375" text-anchor="middle" fill="#ffffff" font-size="18">Arts & Crafts</text>
+                                
+                                <!-- Activity Area 3 -->
+                                <rect x="600" y="300" width="200" height="150" fill="#1a3a54" stroke="#e9c46a" stroke-width="2" class="map-location" data-name="Christmas Games" data-desc="Fun Christmas-themed games for all ages" />
+                                <text x="700" y="375" text-anchor="middle" fill="#ffffff" font-size="18">Christmas Games</text>
+                                
+                                <!-- Raffle & Trivia Area -->
+                                <rect x="200" y="500" width="250" height="150" fill="#1a3a54" stroke="#e9c46a" stroke-width="2" class="map-location" data-name="Raffle & Trivia Area" data-desc="Purchase raffle tickets and participate in Christmas trivia" />
+                                <text x="325" y="575" text-anchor="middle" fill="#ffffff" font-size="18">Raffle & Trivia Area</text>
+                                
+                                <!-- Restrooms -->
+                                <rect x="500" y="500" width="100" height="100" fill="#1a3a54" stroke="#e9c46a" stroke-width="2" class="map-location" data-name="Restrooms" data-desc="Restroom facilities" />
+                                <text x="550" y="550" text-anchor="middle" fill="#ffffff" font-size="18">Restrooms</text>
+                                
+                                <!-- First Aid -->
+                                <rect x="650" y="500" width="100" height="100" fill="#1a3a54" stroke="#e9c46a" stroke-width="2" class="map-location" data-name="First Aid" data-desc="First aid station" />
+                                <text x="700" y="550" text-anchor="middle" fill="#ffffff" font-size="18">First Aid</text>
+                                
+                                <!-- Main Entrance -->
+                                <polygon points="450,650 550,650 500,700" fill="#e9c46a" class="map-location" data-name="Main Entrance" data-desc="Event entrance and ticket collection" />
+                                <text x="500" y="675" text-anchor="middle" fill="#002642" font-size="14" font-weight="bold">Entrance</text>
+                                
+                                <!-- Paths -->
+                                <path d="M500,650 L500,600 L550,550" stroke="#e9c46a" stroke-width="3" fill="none" stroke-dasharray="5,5" />
+                                <path d="M500,600 L450,550" stroke="#e9c46a" stroke-width="3" fill="none" stroke-dasharray="5,5" />
+                                <path d="M500,600 L500,450" stroke="#e9c46a" stroke-width="3" fill="none" stroke-dasharray="5,5" />
+                                <path d="M500,450 L700,375" stroke="#e9c46a" stroke-width="3" fill="none" stroke-dasharray="5,5" />
+                                <path d="M500,450 L450,375" stroke="#e9c46a" stroke-width="3" fill="none" stroke-dasharray="5,5" />
+                                <path d="M500,450 L200,375" stroke="#e9c46a" stroke-width="3" fill="none" stroke-dasharray="5,5" />
+                                <path d="M500,450 L500,200" stroke="#e9c46a" stroke-width="3" fill="none" stroke-dasharray="5,5" />
+                                <path d="M500,200 L800,125" stroke="#e9c46a" stroke-width="3" fill="none" stroke-dasharray="5,5" />
+                                <path d="M500,200 L200,150" stroke="#e9c46a" stroke-width="3" fill="none" stroke-dasharray="5,5" />
+                                <path d="M325,575 L500,450" stroke="#e9c46a" stroke-width="3" fill="none" stroke-dasharray="5,5" />
+                            </svg>
+                        </div>
+                        
+                        <div class="map-info-box">
+                            <h3>Location Information</h3>
+                            <div id="location-info">
+                                <p>Click on any location on the map to see details.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="map-legend">
+                        <h3>Map Legend</h3>
+                        <ul>
+                            <li><span class="legend-color" style="background-color: #1a3a54;"></span> Event Areas</li>
+                            <li><span class="legend-color" style="background-color: #e9c46a;"></span> Entrance</li>
+                            <li><span class="legend-line"></span> Walking Paths</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="location-section">
+                    <h2>Getting to the Event</h2>
+                    <div class="location-details">
+                        <div class="address-info">
+                            <h3>Address</h3>
+                            <p><i class="fas fa-map-marker-alt"></i> The Holy Apostles & St Abanoub Church</p>
+                            <p>29 Chicago Avenue, Blacktown</p>
+                            <p>New South Wales, Australia</p>
+                            
+                            <h3>Public Transport</h3>
+                            <p><i class="fas fa-train"></i> Nearest Train Station: Blacktown Station (15 min walk)</p>
+                            <p><i class="fas fa-bus"></i> Bus Routes: 728, 729 (stops directly outside)</p>
+                            
+                            <h3>Parking</h3>
+                            <p><i class="fas fa-car"></i> Limited parking available on-site</p>
+                            <p><i class="fas fa-parking"></i> Additional parking at Blacktown Showground (5 min walk)</p>
+                        </div>
+                        
+                        <div class="google-map">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3315.0088651367!2d150.9063!3d-33.7712!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDQ2JzE2LjMiUyAxNTDCsDU0JzIyLjciRQ!5e0!3m2!1sen!2sau!4v1638175292478!5m2!1sen!2sau" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h3>Christmas Under The Stars</h3>
+                <p>A magical Christmas celebration under the night sky</p>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <a href="index.html">Home</a>
+                <a href="schedule.html">Schedule</a>
+                <a href="map.html">Map</a>
+                <a href="photos.html">Photos</a>
+            </div>
+            
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <p><i class="fas fa-map-marker-alt"></i> 29 Chicago Avenue, Blacktown</p>
+                <p><i class="fas fa-phone"></i> (02) XXXX XXXX</p>
+                <p><i class="fas fa-envelope"></i> info@churchname.org</p>
+            </div>
+            
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Christmas Under The Stars. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/map.js"></script>
+</body>
+</html>

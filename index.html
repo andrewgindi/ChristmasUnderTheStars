@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christmas Under The Stars</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="stars-container">
+        <div class="stars-layer stars-small"></div>
+        <div class="stars-layer stars-medium"></div>
+        <div class="stars-layer stars-large"></div>
+    </div>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">Christmas Under The Stars</a>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="schedule.html">Schedule</a>
+                <a href="map.html">Map</a>
+                <a href="photos.html">Photos</a>
+                <a href="#qa-section" class="qa-link">Q&A</a>
+            </div>
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero parallax-section">
+            <div class="hanging-ornaments">
+                <div class="ornament star" style="left: 5%; animation-delay: 0s;"></div>
+                <div class="ornament star" style="left: 15%; animation-delay: 0.5s;"></div>
+                <div class="ornament star" style="left: 25%; animation-delay: 1s;"></div>
+                <div class="ornament star" style="left: 35%; animation-delay: 1.5s;"></div>
+                <div class="ornament star" style="left: 45%; animation-delay: 2s;"></div>
+                <div class="ornament star" style="left: 55%; animation-delay: 2.5s;"></div>
+                <div class="ornament star" style="left: 65%; animation-delay: 3s;"></div>
+                <div class="ornament star" style="left: 75%; animation-delay: 3.5s;"></div>
+                <div class="ornament star" style="left: 85%; animation-delay: 4s;"></div>
+                <div class="ornament star" style="left: 95%; animation-delay: 4.5s;"></div>
+                <div class="ornament ball" style="left: 10%; animation-delay: 1s;">
+                    <div class="price">$5 - $10<br>Entry</div>
+                </div>
+            </div>
+            <div class="hero-content">
+                <h1 class="glow-text">Christmas</h1>
+                <h1 class="glow-text">Under The Stars</h1>
+                <div class="event-details">
+                    <p class="time">5pm - 9pm</p>
+                    <p class="date">Sunday 21 December 2025</p>
+                    <div class="divider"></div>
+                    <p class="location">The Holy Apostles & St Abanoub Church</p>
+                    <p class="address">29 Chicago Avenue, Blacktown</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="event-highlights parallax-section">
+            <div class="highlight-container">
+                <div class="highlight-card">
+                    <div class="highlight-icon">
+                        <img src="images/activities-icon.svg" alt="Activities">
+                    </div>
+                    <h2>Activities</h2>
+                    <ul>
+                        <li>Santa Photo Booth</li>
+                        <li>Raffle</li>
+                        <li>Christmas Games</li>
+                        <li>Arts & Crafts</li>
+                        <li>Christmas Trivia</li>
+                    </ul>
+                </div>
+                
+                <div class="highlight-card">
+                    <div class="highlight-icon">
+                        <img src="images/performances-icon.svg" alt="Performances">
+                    </div>
+                    <h2>Performances</h2>
+                    <ul>
+                        <li>Christmas Carols</li>
+                        <li>Skits</li>
+                        <li>Coptic Hymns</li>
+                        <li>Nativity Story</li>
+                        <li>Interactive Carols</li>
+                    </ul>
+                </div>
+                
+                <div class="highlight-card">
+                    <div class="highlight-icon">
+                        <img src="images/food-icon.svg" alt="Food & Drinks">
+                    </div>
+                    <h2>Food & Drinks</h2>
+                    <ul>
+                        <li>Fish Tacos</li>
+                        <li>Chips on a Stick</li>
+                        <li>Fool & Falafel</li>
+                        <li>Fairy Floss</li>
+                        <li>Loukoumades</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="qa-section" class="qa-section parallax-section">
+            <div class="section-content">
+                <h2 class="section-title">Questions & Answers</h2>
+                <p>Have a question about the event? Submit it below and we'll get back to you!</p>
+                
+                <form id="qa-form" class="qa-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="question">Your Question</label>
+                        <textarea id="question" name="question" rows="4" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Submit Question</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h3>Christmas Under The Stars</h3>
+                <p>A magical Christmas celebration under the night sky</p>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <a href="index.html">Home</a>
+                <a href="schedule.html">Schedule</a>
+                <a href="map.html">Map</a>
+                <a href="photos.html">Photos</a>
+            </div>
+            
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <p><i class="fas fa-map-marker-alt"></i> 29 Chicago Avenue, Blacktown</p>
+                <p><i class="fas fa-phone"></i> (02) XXXX XXXX</p>
+                <p><i class="fas fa-envelope"></i> info@churchname.org</p>
+            </div>
+            
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Christmas Under The Stars. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
