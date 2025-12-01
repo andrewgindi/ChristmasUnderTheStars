@@ -1,4 +1,12 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Make video stop on the last frame
+    const video = document.querySelector('.nativity-background video');
+    if (video) {
+        video.addEventListener('ended', function() {
+            // When video ends, pause on the last frame
+            this.pause();
+        });
+    }
     // Mobile Navigation Toggle
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
@@ -33,9 +41,9 @@ document.addEventListener('DOMContentLoaded', function() {
         // Header transparency based on scroll
         const header = document.querySelector('header');
         if (scrollPosition > 100) {
-            header.style.backgroundColor = 'rgba(0, 38, 66, 0.95)';
+            header.style.backgroundColor = 'rgba(0, 18, 88, 0.3)';
         } else {
-            header.style.backgroundColor = 'rgba(0, 38, 66, 0.8)';
+            header.style.backgroundColor = 'transparent';
         }
     });
     

@@ -1,6 +1,6 @@
 /* Global Styles */
 :root {
-    --primary-color: #002642; /* Deep blue background from poster */
+    --primary-color: #001258; /* Deep blue background from poster */
     --accent-color: #e9c46a; /* Gold/yellow for stars */
     --glow-color: #f0f3bd; /* Light yellow for text glow */
     --text-color: #ffffff;
@@ -41,53 +41,6 @@ ul {
     list-style-type: none;
 }
 
-/* Stars Background */
-.stars-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    overflow: hidden;
-}
-
-.stars-layer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-repeat: repeat;
-    opacity: 0.7;
-}
-
-.stars-small {
-    background-image: radial-gradient(1px 1px at 50% 50%, var(--accent-color), rgba(0,0,0,0));
-    background-size: 100px 100px;
-    animation: animateStars 100s linear infinite;
-}
-
-.stars-medium {
-    background-image: radial-gradient(2px 2px at 50% 50%, var(--accent-color), rgba(0,0,0,0));
-    background-size: 200px 200px;
-    animation: animateStars 150s linear infinite;
-}
-
-.stars-large {
-    background-image: radial-gradient(3px 3px at 50% 50%, var(--accent-color), rgba(0,0,0,0));
-    background-size: 300px 300px;
-    animation: animateStars 200s linear infinite;
-}
-
-@keyframes animateStars {
-    from {
-        transform: translateY(0);
-    }
-    to {
-        transform: translateY(1000px);
-    }
-}
 
 /* Parallax Effects */
 .parallax-section {
@@ -99,6 +52,32 @@ ul {
     overflow: hidden;
 }
 
+/* Nativity Background Video */
+.nativity-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.nativity-background video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translateX(-50%) translateY(-50%);
+    opacity: 0.8;
+    object-fit: cover;
+    filter: brightness(1.2) contrast(1.2);
+}
+
 /* Navigation */
 header {
     position: fixed;
@@ -106,8 +85,8 @@ header {
     left: 0;
     width: 100%;
     z-index: 1000;
-    background-color: rgba(0, 38, 66, 0.8);
-    backdrop-filter: blur(10px);
+    background-color: transparent;
+    backdrop-filter: none;
     transition: all 0.3s ease;
 }
 
@@ -293,7 +272,7 @@ nav {
 /* Event Highlights Section */
 .event-highlights {
     padding: var(--section-padding);
-    background-color: rgba(0, 38, 66, 0.7);
+    background-color: rgba(0, 18, 88, 0.7);
 }
 
 .highlight-container {
@@ -359,7 +338,7 @@ nav {
 /* Q&A Section */
 .qa-section {
     padding: var(--section-padding);
-    background-color: rgba(0, 38, 66, 0.9);
+    background-color: rgba(0, 18, 88, 0.9);
 }
 
 .section-content {
@@ -429,8 +408,21 @@ nav {
 
 /* Footer */
 footer {
-    background-color: rgba(0, 20, 36, 0.9);
+    background-color: rgba(0, 18, 88, 0.9);
     padding: 60px 20px 20px;
+    border-top: 1px solid rgba(233, 196, 106, 0.3);
+    position: relative;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background: linear-gradient(to bottom, transparent, rgba(0, 18, 88, 0.3));
+    pointer-events: none;
 }
 
 .footer-content {
@@ -540,7 +532,7 @@ footer {
         top: 70px;
         left: -100%;
         flex-direction: column;
-        background-color: rgba(0, 38, 66, 0.95);
+        background-color: rgba(0, 18, 88, 0.2);
         backdrop-filter: blur(10px);
         width: 100%;
         text-align: center;

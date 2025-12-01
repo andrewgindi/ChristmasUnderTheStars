@@ -27,12 +27,44 @@
 /* Photos Section */
 .photos-section {
     padding: var(--section-padding);
-    background-color: rgba(0, 38, 66, 0.7);
+    background-color: rgba(0, 18, 88, 0.7);
 }
 
 .section-content {
     max-width: 1200px;
     margin: 0 auto;
+}
+
+/* Coming Soon Section */
+.coming-soon {
+    text-align: center;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 50px 20px;
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.coming-soon h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--accent-color);
+}
+
+.coming-soon p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-bottom: 15px;
+}
+
+.coming-soon-icon {
+    margin-top: 40px;
+    font-size: 4rem;
+    color: var(--accent-color);
+    opacity: 0.8;
 }
 
 .gallery-intro {
@@ -135,7 +167,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to top, rgba(0, 38, 66, 0.9), transparent);
+    background: linear-gradient(to top, rgba(0, 18, 88, 0.9), transparent);
     display: flex;
     align-items: flex-end;
     padding: 20px;
@@ -194,7 +226,7 @@
     text-align: center;
     padding: 10px;
     margin-top: 10px;
-    background-color: rgba(0, 38, 66, 0.8);
+    background-color: rgba(0, 18, 88, 0.8);
     border-radius: 5px;
 }
 
@@ -217,7 +249,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 38, 66, 0.7);
+    background-color: rgba(0, 18, 88, 0.7);
     color: white;
     border: none;
     width: 50px;
